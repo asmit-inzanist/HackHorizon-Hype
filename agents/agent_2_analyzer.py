@@ -34,33 +34,64 @@ PATIENT'S PRESCRIBED MEDICINES:
 {prescribed_medicines}
 
 Analyze each medicine and return ONLY valid JSON (no markdown, no code blocks):
-{{
+{
     "medicines": [
-        {{
+        {
             "original_name": "prescribed brand name",
             "original_price": 150.0,
             "generic_name": "active ingredient / salt name",
+            "therapeutic_category": "e.g. Antibiotic / NSAID / Antihypertensive / Antidiabetic / Antacid / Antifungal",
+            "formulation_type": "tablet / capsule / syrup / injection / cream / inhaler",
             "generic_alternatives": [
-                {{
+                {
                     "name": "generic brand name",
                     "price": 45.0,
                     "manufacturer": "company",
-                    "savings": 105.0
-                }}
+                    "savings": 105.0,
+                    "formulation_type": "tablet",
+                    "formulation_match": true
+                }
             ],
+            "formulation_compatibility": {
+                "status": "compatible",
+                "status_flag": "✅",
+                "notes": "All alternatives are tablets matching original formulation exactly."
+            },
+            "dosage_compatibility": {
+                "compatible": true,
+                "notes": "Generic 500mg matches prescribed 500mg exactly."
+            },
             "cdsco_approved": true,
             "safety_equivalent": true,
-            "safety_notes": "brief note on equivalence"
-        }}
+            "safety_notes": "Same active ingredient, same dosage, CDSCO approved. Safe to substitute.",
+            "long_term_cost_projection": {
+                "frequency_assumption": "once daily chronic use — 1 strip per month",
+                "strips_per_month": 1,
+                "original_monthly_cost": 150.0,
+                "cheapest_generic_monthly_cost": 45.0,
+                "monthly_savings": 105.0,
+                "yearly_savings": 1260.0,
+                "five_year_savings": 6300.0
+            }
+        }
     ],
     "total_savings": 250.0,
+    "total_monthly_savings": 105.0,
+    "total_yearly_savings": 1260.0,
     "summary": "brief overall summary of savings potential"
-}}
+}
 
 Rules:
 - Calculate savings = original_price - generic_price for each alternative
-- total_savings = sum of maximum possible savings across all medicines
-- safety_equivalent should be true ONLY if the generic has the same active ingredient and dosage form
+- total_savings = sum of maximum possible savings PER prescription fill
+- total_monthly_savings and total_yearly_savings = computed across ALL medicines combined
+- safety_equivalent must be true ONLY if the generic has the SAME active ingredient AND same dosage strength
+- formulation_compatibility.status values:
+    * "compatible" — ALL alternatives share the SAME formulation type (e.g. all tablets) → flag = ✅
+    * "partial" — SOME alternatives differ in formulation type (e.g. mixed tablets and capsules) → flag = ⚠️
+    * "incompatible" — NO alternative matches the original formulation type → flag = ❌
+- dosage_compatibility.compatible = true only if at least one alternative matches the EXACT dosage strength
+- For long_term_cost_projection: if frequency is 'acute/short course', use 1 strip total; if 'chronic/daily', use 1-2 strips/month
 - All prices in Indian Rupees (₹)
 - Sort alternatives by price (cheapest first)
 - If no data available for a medicine, still include it with nulls

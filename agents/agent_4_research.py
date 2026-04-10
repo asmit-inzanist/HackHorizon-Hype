@@ -26,6 +26,8 @@ For each of the following medicines, search the web and find:
 3. CDSCO (Central Drugs Standard Control Organisation) approval status
 4. Manufacturer information
 5. Availability status
+6. Formulation type — e.g. tablet, capsule, syrup, injection, cream, inhaler
+7. Therapeutic category — e.g. antibiotic, NSAID, antihypertensive, antidiabetic, antacid
 
 Medicines to research:
 {medicine_list}
@@ -37,12 +39,16 @@ Return ONLY valid JSON (no markdown, no code blocks) with this structure:
             "original_name": "brand name as provided",
             "original_price_inr": 150.0,
             "generic_name": "generic/salt name",
+            "formulation_type": "tablet",
+            "therapeutic_category": "antibiotic",
             "generic_alternatives": [
                 {{
                     "name": "alternative brand/generic name",
                     "price_inr": 45.0,
                     "manufacturer": "company name",
-                    "cdsco_approved": true
+                    "cdsco_approved": true,
+                    "formulation_type": "tablet",
+                    "formulation_match": true
                 }}
             ],
             "cdsco_approved": true,
@@ -56,6 +62,7 @@ Rules:
 - Focus on Indian pharmaceutical market only
 - Include at least 2-3 generic alternatives per medicine if available
 - If exact price is unknown, provide an approximate range
+- formulation_match must be true ONLY if the alternative has the SAME formulation type as the original (e.g. both tablets)
 - Be factual — if information is not found, set to null
 """
 
