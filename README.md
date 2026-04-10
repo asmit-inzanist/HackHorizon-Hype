@@ -19,12 +19,12 @@ JAN-AIKYA is a full-stack AI-powered health platform that solves two critical he
 
 ## 🤖 The 4 AI Agents
 
-| Agent | Model | Role |
-|---|---|---|
-| **Agent 1 — Document Intake** | Gemini 1.5 Flash (Vision) | Reads prescriptions/PDFs, extracts structured medicine + diagnosis data, merges voice notes |
-| **Agent 2 — Medicine Analyzer** | Llama 3.3 70B (OpenRouter) | Finds cheaper generic alternatives, checks formulation + dosage compatibility, calculates monthly/yearly savings |
-| **Agent 3 — Patient Summarizer** | Gemini 1.5 Flash | Generates doctor-facing summaries, cross-checks allergies, triggers audio TTS allergy alerts |
-| **Agent 4 — Web Researcher** | Gemini 1.5 Flash + Google Search | Searches real-time Indian market prices, CDSCO approval status, formulation types, therapeutic categories |
+| Agent | Role |
+|---|---|
+| **Agent 1 — Document Intake** | Reads prescriptions/PDFs, extracts structured medicine + diagnosis data, merges voice notes |
+| **Agent 2 — Medicine Analyzer** | Finds cheaper generic alternatives, checks formulation + dosage compatibility, calculates monthly/yearly savings |
+| **Agent 3 — Patient Summarizer** | Generates doctor-facing summaries, cross-checks allergies, triggers audio TTS allergy alerts |
+| **Agent 4 — Web Researcher** | Searches real-time Indian market prices, CDSCO approval status, formulation types, therapeutic categories |
 
 ---
 
