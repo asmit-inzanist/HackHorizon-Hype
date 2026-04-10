@@ -1,0 +1,111 @@
+.dashboard-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #030f26; /* Deep navy background */
+  color: #f8fafc;
+  font-family: 'Google Sans Flex', system-ui, -apple-system, sans-serif;
+}
+
+.dashboard-top-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem 2rem;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.menu-toggle-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #f8fafc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.menu-toggle-btn:hover {
+  background-color: rgba(248, 250, 252, 0.1);
+}
+
+.nav-brand-text {
+  font-size: 1.25rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #38bdf8, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.02em;
+}
+
+.dashboard-content {
+  flex-grow: 1;
+  padding: 2.5rem 4rem;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+/* Premium Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(3, 15, 38, 0.5); 
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.3); 
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.5); 
+}
+
+/* Shared Premium Card Styles */
+.dashboard-card {
+  background-color: #0b1120;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(59, 130, 246, 0.5);
+  box-shadow: 0 20px 40px -15px rgba(37, 99, 235, 0.25);
+}
+
+/* Headers */
+.dashboard-header {
+  margin-bottom: 2.5rem;
+}
+
+.dashboard-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -0.02em;
+  color: #f1f5f9;
+}
+
+.dashboard-header p {
+  color: #94a3b8;
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Shared Titles */
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #f1f5f9;
+  margin: 2.5rem 0 1.25rem 0;
+}

@@ -1,0 +1,49 @@
+/* Dynamic clockwise spinning glow */
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0deg;
+}
+
+@keyframes glow-rotate {
+  0% { --border-angle: 0deg; }
+  100% { --border-angle: 360deg; }
+}
+
+.border-glow-card {
+  position: relative;
+  z-index: 1;
+  padding: 3px; 
+  border-radius: var(--border-radius, 28px);
+  overflow: hidden;
+  background: var(--card-bg, #060010);
+  box-sizing: border-box;
+}
+
+.border-glow-card::before {
+  content: "";
+  position: absolute;
+  inset: -150%;
+  background: conic-gradient(
+    from var(--border-angle, 0deg) at 50% 50%,
+    transparent 0%,
+    transparent 75%,
+    #3b82f6 90%, 
+    #c084fc 100%
+  );
+  animation: glow-rotate 3s linear infinite;
+  z-index: -2;
+}
+
+.border-glow-inner {
+  position: relative;
+  z-index: 2;
+  background-color: var(--card-bg, #060010);
+  border-radius: calc(var(--border-radius, 28px) - 3px);
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}

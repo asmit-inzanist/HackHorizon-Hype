@@ -1,0 +1,59 @@
+.hero-page {
+  padding-top: 4rem;
+}
+
+.hero-section {
+  min-height: calc(100vh - 4rem);
+  display: flex;
+  align-items: center;
+  padding: 4.5rem 1.5rem 3.5rem;
+}
+
+.hero-layout {
+  display: grid;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .hero-layout {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+}
+
+/* Features section */
+
+.features-container {
+  width: 90vw;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1.5rem 5rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 2rem;
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .features-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .features-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Optional: base style for scroll items (cards) */
+.scroll-item {
+  will-change: transform, opacity;
+}

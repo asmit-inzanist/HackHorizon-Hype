@@ -1,0 +1,155 @@
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.stat-icon-wrapper {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-info h3 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #f8fafc;
+}
+
+.stat-info span {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.quick-actions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.quick-action-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  text-align: left;
+  cursor: pointer;
+  background: transparent;
+  color: inherit;
+  font-family: inherit;
+}
+
+.quick-action-card:hover .action-icon {
+  background-color: rgba(59, 130, 246, 0.2);
+  color: #60a5fa;
+  transform: scale(1.05);
+}
+
+.action-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background-color: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.action-text h4 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #f1f5f9;
+}
+
+.action-text p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+.records-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 0;
+}
+
+.record-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid rgba(59, 130, 246, 0.15);
+}
+
+.record-item:last-child {
+  border-bottom: none;
+}
+
+.record-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.record-icon-wrapper {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background-color: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.record-title {
+  font-weight: 500;
+  color: #f8fafc;
+}
+
+.record-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.record-badge {
+  background-color: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.record-date {
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+@media (max-width: 1100px) {
+  .stats-grid, .quick-actions-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .stats-grid, .quick-actions-grid {
+    grid-template-columns: 1fr;
+  }
+}

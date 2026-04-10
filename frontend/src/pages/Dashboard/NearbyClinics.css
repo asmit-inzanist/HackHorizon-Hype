@@ -1,0 +1,120 @@
+.clinicsPage {
+  max-width: 1100px;
+}
+
+/* HEADER */
+.clinicsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.clinicsHeader h2 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.clinicsHeader span {
+  color: #6b7280;
+}
+
+/* TOGGLE */
+.viewToggle {
+  display: flex;
+  gap: 10px;
+  background: #f9fafb;
+  padding: 6px;
+  border-radius: 999px;
+}
+
+.viewToggle button {
+  border: none;
+  background: transparent;
+  padding: 8px 16px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.viewToggle .active {
+  background: white;
+  box-shadow: 0 0 0 1px #eee;
+}
+
+/* GRID */
+.clinicGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 22px;
+}
+
+/* CARD */
+.clinicCard {
+  background: #fbfbfd;
+  border-radius: 22px;
+  border: 1px solid #ececec;
+  padding: 18px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* INFO */
+.clinicTitle {
+  font-weight: 600;
+  font-size: 1rem;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.badge {
+  background: #dff7f1;
+  color: #10b981;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.7rem;
+}
+
+.row {
+  color: #6b7280;
+  font-size: 0.85rem;
+  margin-top: 6px;
+}
+
+.distance {
+  color: #10b981;
+  font-size: 0.85rem;
+  margin-top: 8px;
+}
+
+/* ACTIONS */
+.clinicActions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.clinicActions button {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid #ececec;
+  background: white;
+  cursor: pointer;
+}
+
+/* FOOTER */
+.clinicFooter {
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.85rem;
+  margin-top: 40px;
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+  .clinicGrid {
+    grid-template-columns: 1fr;
+  }
+}
