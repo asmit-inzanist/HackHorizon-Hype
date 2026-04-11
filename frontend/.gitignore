@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Cloned/downloaded directories
+HackHorizon-Hype
+react-bits-repo
+stitch_output

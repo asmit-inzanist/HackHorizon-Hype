@@ -237,7 +237,7 @@ const Masonry = ({
               style={{
                 backgroundImage: `url(${item.img})`,
                 // softer blue tint
-                filter: 'sepia(100%) hue-rotate(190deg) saturate(300%)',
+                filter: 'sepia(30%) hue-rotate(190deg) saturate(120%) opacity(0.85)',
               }}
             >
               {colorShiftOnHover && (

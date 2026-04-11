@@ -86,6 +86,7 @@
 /* Headers */
 .dashboard-header {
   margin-bottom: 2.5rem;
+  text-align: center;
 }
 
 .dashboard-header h1 {

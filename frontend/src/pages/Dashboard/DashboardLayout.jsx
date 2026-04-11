@@ -20,12 +20,12 @@ export default function DashboardLayout() {
       {/* Global Dashboard Animated Background */}
       <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: 0, pointerEvents: 'none' }}>
         <SoftAurora
-          speed={0.6}
-          scale={1.5}
-          brightness={1}
-          color1="#f7f7f7"
-          color2="#e100ff"
-          noiseFrequency={2.5}
+          speed={0.2}
+          scale={1.2}
+          brightness={0.7}
+          color1="#1e3a8a"
+          color2="#312e81"
+          noiseFrequency={1.5}
           noiseAmplitude={1}
           bandHeight={0.5}
           bandSpread={1}

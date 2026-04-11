@@ -44,7 +44,7 @@ function LandingPage() {
     <div className="app-root">
 
       {/* Background */}
-      <Threads color={[1, 1, 1]} amplitude={1.2} distance={0.4} />
+      <Threads color={[0.7, 0.7, 0.75]} amplitude={0.6} distance={0.3} />
 
       {/* Foreground content */}
       <div className="app-content hero-page">
@@ -87,11 +87,11 @@ function LandingPage() {
         <section className="features-container">
           <ScrollFloat
             containerClassName="features-grid"
-            animationDuration={0.8}
-            ease="back.inOut(2)"
-            scrollStart="top 80%"
-            scrollEnd="bottom 40%"
-            stagger={0.08}
+            animationDuration={1.2}
+            ease="power3.out"
+            scrollStart="top 85%"
+            scrollEnd="bottom 35%"
+            stagger={0.12}
           >
             <FeatureCard
               className="scroll-item"
@@ -124,12 +124,12 @@ function LandingPage() {
         <section className="masonry-section">
           <Masonry
             items={items}
-            ease="power3.out"
-            duration={1}
-            stagger={0.03}
+            ease="power2.out"
+            duration={1.4}
+            stagger={0.05}
             animateFrom="bottom"
             scaleOnHover
-            hoverScale={0.95}
+            hoverScale={0.97}
             blurToFocus
             colorShiftOnHover
           />
@@ -143,8 +143,8 @@ function LandingPage() {
               animateOn="view"
               revealDirection="center"
               sequential
-              speed={50}
-              maxIterations={8}
+              speed={70}
+              maxIterations={5}
               className="about-heading"
               parentClassName="about-heading-wrapper"
               encryptedClassName="about-heading-encrypted"
@@ -165,12 +165,12 @@ function LandingPage() {
           <div className="container" style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', minHeight: '800px', paddingTop: '4rem', paddingBottom: '6rem', gap: '4rem' }}>
             
             <div style={{ flex: 1 }}>
-              <h2 className="heading-xl" style={{ color: '#f8fafc', fontSize: '4.5rem', lineHeight: 1.1, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+              <h2 className="heading-xl" style={{ color: '#e2e8f0', fontSize: '4rem', lineHeight: 1.15, textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                 <ScrollReveal
-                  baseOpacity={0.1}
+                  baseOpacity={0.15}
                   enableBlur
-                  baseRotation={3}
-                  blurStrength={10}
+                  baseRotation={1.5}
+                  blurStrength={6}
                   wordAnimationEnd="top 40%"
                   rotationEnd="top 40%"
                 >
@@ -181,7 +181,7 @@ function LandingPage() {
 
             <div style={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
               <CardSwap pauseOnHover={true} width={380} height={500}>
-                <Card className="demo-card-placeholder" style={{ background: '#0a192f', border: '1px solid rgba(56, 189, 248, 0.3)', borderRadius: '24px', overflow: 'hidden', display: 'flex', flexDirection: 'column', height: '100%', color: '#f8fafc', boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)' }}>
+                <Card className="demo-card-placeholder" style={{ background: '#0a192f', border: '1px solid rgba(56, 189, 248, 0.15)', borderRadius: '24px', overflow: 'hidden', display: 'flex', flexDirection: 'column', height: '100%', color: '#f8fafc', boxShadow: '0 15px 35px -12px rgba(0, 0, 0, 0.3)' }}>
                   <div style={{ width: '100%', height: '55%', position: 'relative' }}>
                     <img src="/src/assets/admin1.jpeg" alt="Eagar Nandi" style={{ objectFit: 'cover', width: '100%', height: '100%', objectPosition: 'center 20%' }} />
                     <div style={{ position: 'absolute', bottom: 0, left: 0, width: '100%', height: '50%', background: 'linear-gradient(to top, #0a192f, transparent)' }}></div>
@@ -194,7 +194,7 @@ function LandingPage() {
                   </div>
                 </Card>
 
-                <Card className="demo-card-placeholder" style={{ background: '#0a192f', border: '1px solid rgba(129, 140, 248, 0.3)', borderRadius: '24px', overflow: 'hidden', display: 'flex', flexDirection: 'column', height: '100%', color: '#f8fafc', boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)' }}>
+                <Card className="demo-card-placeholder" style={{ background: '#0a192f', border: '1px solid rgba(129, 140, 248, 0.15)', borderRadius: '24px', overflow: 'hidden', display: 'flex', flexDirection: 'column', height: '100%', color: '#f8fafc', boxShadow: '0 15px 35px -12px rgba(0, 0, 0, 0.3)' }}>
                   <div style={{ width: '100%', height: '55%', position: 'relative' }}>
                     <img src="/src/assets/admin2.jpeg" alt="Sarthack Das" style={{ objectFit: 'cover', width: '100%', height: '100%', objectPosition: 'center 20%' }} />
                     <div style={{ position: 'absolute', bottom: 0, left: 0, width: '100%', height: '50%', background: 'linear-gradient(to top, #0a192f, transparent)' }}></div>
@@ -207,7 +207,7 @@ function LandingPage() {
                   </div>
                 </Card>
 
-                <Card className="demo-card-placeholder" style={{ background: '#0a192f', border: '1px solid rgba(192, 132, 252, 0.3)', borderRadius: '24px', overflow: 'hidden', display: 'flex', flexDirection: 'column', height: '100%', color: '#f8fafc', boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)' }}>
+                <Card className="demo-card-placeholder" style={{ background: '#0a192f', border: '1px solid rgba(192, 132, 252, 0.15)', borderRadius: '24px', overflow: 'hidden', display: 'flex', flexDirection: 'column', height: '100%', color: '#f8fafc', boxShadow: '0 15px 35px -12px rgba(0, 0, 0, 0.3)' }}>
                   <div style={{ width: '100%', height: '55%', position: 'relative' }}>
                     <img src="/src/assets/admin3.jpeg" alt="Bineet Bairagi" style={{ objectFit: 'cover', width: '100%', height: '100%', objectPosition: 'center 20%' }} />
                     <div style={{ position: 'absolute', bottom: 0, left: 0, width: '100%', height: '50%', background: 'linear-gradient(to top, #0a192f, transparent)' }}></div>
@@ -220,7 +220,7 @@ function LandingPage() {
                   </div>
                 </Card>
 
-                <Card className="demo-card-placeholder" style={{ background: '#0a192f', border: '1px solid rgba(244, 114, 182, 0.3)', borderRadius: '24px', overflow: 'hidden', display: 'flex', flexDirection: 'column', height: '100%', color: '#f8fafc', boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)' }}>
+                <Card className="demo-card-placeholder" style={{ background: '#0a192f', border: '1px solid rgba(244, 114, 182, 0.15)', borderRadius: '24px', overflow: 'hidden', display: 'flex', flexDirection: 'column', height: '100%', color: '#f8fafc', boxShadow: '0 15px 35px -12px rgba(0, 0, 0, 0.3)' }}>
                   <div style={{ width: '100%', height: '55%', position: 'relative' }}>
                     <img src="/src/assets/admin4.jpeg" alt="Asmit Goswami" style={{ objectFit: 'cover', width: '100%', height: '100%', objectPosition: 'center 20%' }} />
                     <div style={{ position: 'absolute', bottom: 0, left: 0, width: '100%', height: '50%', background: 'linear-gradient(to top, #0a192f, transparent)' }}></div>
@@ -233,7 +233,7 @@ function LandingPage() {
                   </div>
                 </Card>
 
-                <Card className="demo-card-placeholder" style={{ background: '#0a192f', border: '1px solid rgba(167, 243, 208, 0.3)', borderRadius: '24px', overflow: 'hidden', display: 'flex', flexDirection: 'column', height: '100%', color: '#f8fafc', boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)' }}>
+                <Card className="demo-card-placeholder" style={{ background: '#0a192f', border: '1px solid rgba(167, 243, 208, 0.15)', borderRadius: '24px', overflow: 'hidden', display: 'flex', flexDirection: 'column', height: '100%', color: '#f8fafc', boxShadow: '0 15px 35px -12px rgba(0, 0, 0, 0.3)' }}>
                   <div style={{ width: '100%', height: '55%', position: 'relative' }}>
                     <img src="/src/assets/admin5.jpeg" alt="Urshashi Majumder" style={{ objectFit: 'cover', width: '100%', height: '100%', objectPosition: 'center 20%' }} />
                     <div style={{ position: 'absolute', bottom: 0, left: 0, width: '100%', height: '50%', background: 'linear-gradient(to top, #0a192f, transparent)' }}></div>
